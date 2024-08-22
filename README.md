@@ -1,0 +1,1 @@
+Este repositório foi criado com intuito de acompanhar minhas evoluções na linguagem python.
