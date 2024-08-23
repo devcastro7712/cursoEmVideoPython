@@ -1,3 +1,4 @@
+# Faça um programa que toque música!
 import pygame
 
 pygame.init()
