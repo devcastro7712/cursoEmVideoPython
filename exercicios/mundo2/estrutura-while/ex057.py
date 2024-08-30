@@ -3,7 +3,7 @@
 sexo = "m"
 
 while True:
-    sexo = input("Digite seu sexo [M ou F]: ").lower().strip()
+    sexo = input("Digite seu sexo [M ou F]: ").lower()[0].strip()
     if sexo != "m" and sexo != "f":
         print("Opção errada, digite novamente!")
     else:
