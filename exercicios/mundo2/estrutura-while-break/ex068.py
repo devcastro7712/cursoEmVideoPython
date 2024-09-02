@@ -3,29 +3,25 @@
 
 import random
 
-print(20 * "=-")
-print("Vamos jogar PAR ou ÍMPAR".upper())
-print(20 * "=-")
-cont_vitorias = 0
+total_de_vitorias = 0
 while True:
-    numero = int(input("\nDigite um valor: "))
-    escolha = str(input("Par ou Ímpar [P/I]: ")).upper().strip()[0]
-    while escolha not in ["P", "I"]:
-        escolha = str(input("Escolha inválida! Par ou Ímpar [P/I]: ")).upper().strip()[0]
-    computador = random.randint(0, 10)
-    soma = computador + numero
+
+    escolha_do_usuario_numero = int(input("Escolha um número: "))
+    escolha_do_usuario_par_impar = str(input("Você quer par ou ímpar? [P/I]: ")).upper().strip()[0]
+
+    escolha_do_computador_numero = random.randint(0, 10)
+    soma = escolha_do_computador_numero + escolha_do_usuario_numero
+
     if soma % 2 == 0:
         resultado = "P"
     else:
         resultado = "I"
-    print(f"Você jogou {numero} e o computador jogou {computador}. A soma é {soma}. ", end="")
-    print("Deu PAR!" if resultado == "P" else "Deu ÍMPAR!")
-    if escolha == resultado:
-        print("Você venceu!\n")
-        cont_vitorias += 1
+
+    if escolha_do_usuario_par_impar == resultado:
+        print("Você venceu!")
+        total_de_vitorias += 1
     else:
-        print("Você perdeu!")
+        print(f"Você perdeu! O total de vitórias consecutivas foi de {total_de_vitorias}.")
         break
-print(f"Fim de jogo! Você teve {cont_vitorias} vitórias consecutivas.")
 
-
+print("Programa finalizado!")
